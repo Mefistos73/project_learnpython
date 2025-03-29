@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание курса Основы Python">
+    <title>Основы Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #4CAF50; /* Зеленый цвет шапки */
+            padding: 20px 0;
+            color: white;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            gap: 20px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #d0ffd0; /* Светло-зелёный при наведении */
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .main-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .text {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fcfcfc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #9b9b9b;
+            padding: 12px;  
+            text-align: center;
+            font-size: 16px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+        }
+        .code-snippet {
+            background-color: #2d2d2d;
+            color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .output {
+            color: #03a9f4; /* Голубой цвет для цифр */
+            font-weight: bold;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #333; /* Серый цвет футера */
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Основы Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="python-basics.html">Основы Python</a></li>
+                    <li><a href="conditions-loops.html">Условия и циклы</a></li>
+                    <li><a href="functions-modules.html">Функции и модули</a></li>
+                    <li><a href="working-with-files.html">Работа с файлами</a></li>
+                    <li><a href="oop-basics.html">Основы ООП</a></li>
+                    <li><a href="projects.html">Практические проекты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Описание раздела "Основы Python" с таблицами -->
+    <section>
+        <div class="container">
+            <h1 class="main-title">Операторы в Python</h1>
+            <p class="text">В языке программирования Python есть арифметические, логические и операторы сравнения. Ниже приведены примеры основных арифметических операторов:</p>
+
+            <table>
+                <tr>
+                    <th>Операция</th>
+                    <th>Пример кода</th>
+                    <th>Вывод</th>
+                </tr>
+                <tr>
+                    <td>Сложение (+)</td>
+                    <td>
+                        <div class="code-snippet">print(5 + 3)</div>
+                    </td>
+                    <td><span class="output">8</span></td>
+                </tr>
+                <tr>
+                    <td>Вычитание (-)</td>
+                    <td>
+                        <div class="code-snippet">print(10 - 4)</div>
+                    </td>
+                    <td><span class="output">6</span></td>
+                </tr>
+                <tr>
+                    <td>Умножение (*)</td>
+                    <td>
+                        <div class="code-snippet">print(7 * 6)</div>
+                    </td>
+                    <td><span class="output">42</span></td>
+                </tr>
+                <tr>
+                    <td>Деление (/)</td>
+                    <td>
+                        <div class="code-snippet">print(8 / 2)</div>
+                    </td>
+                    <td><span class="output">4.0</span></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+   <!-- Футер -->
+   <footer>
+    <div class="containerr">
+        <p>&copy; 2025 Онлайн-обучение Python для школьников старших классов</p>
+    </div>
+</body>
+</html>
