@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;  
+            font-size: 20px;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            gap: 20px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            color: black;
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: black;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        .output {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+        .results {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Тест по Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="python-basics.html">Основы Python</a></li>
+                    <li><a href="loops.html">Циклы</a></li>
+                    <li><a href="lists.html">Списки</a></li>
+                    <li><a href="functions-modules.html">Функции</a></li>
+                    <li><a href="projects.html">Практические задания</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <h2>Пройдите тест по Python</h2>
+
+    <div class="question">
+        <p><strong>1. Какой оператор используется для сложения?</strong></p>
+        <label><input type="radio" name="q1" value="1"> +</label><br>
+        <label><input type="radio" name="q1" value="0"> -</label><br>
+        <label><input type="radio" name="q1" value="0"> *</label><br>
+        <label><input type="radio" name="q1" value="0"> /</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>2. Какой оператор используется для сравнения равенства?</strong></p>
+        <label><input type="radio" name="q2" value="1"> ==</label><br>
+        <label><input type="radio" name="q2" value="0"> =</label><br>
+        <label><input type="radio" name="q2" value="0"> !=</label><br>
+        <label><input type="radio" name="q2" value="0"> > </label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>3. Какой цикл используется для итерации по элементам коллекции?</strong></p>
+        <label><input type="radio" name="q3" value="1"> for</label><br>
+        <label><input type="radio" name="q3" value="0"> if</label><br>
+        <label><input type="radio" name="q3" value="0"> while</label><br>
+        <label><input type="radio" name="q3" value="0"> switch</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>4. Как создать список в Python?</strong></p>
+        <label><input type="radio" name="q4" value="1"> my_list = [1, 2, 3]</label><br>
+        <label><input type="radio" name="q4" value="0"> my_list = (1, 2, 3)</label><br>
+        <label><input type="radio" name="q4" value="0"> my_list = {1, 2, 3}</label><br>
+        <label><input type="radio" name="q4" value="0"> my_list = 1, 2, 3</label><br>
+    </div>
+
+    <div class="question">
+        <p><strong>5. Какой ключ используется для определения функции в Python?</strong></p>
+        <label><input type="radio" name="q5" value="1"> def</label><br>
+        <label><input type="radio" name="q5" value="0"> function</label><br>
+        <label><input type="radio" name="q5" value="0"> func</label><br>
+        <label><input type="radio" name="q5" value="0"> method</label><br>
+    </div>
+
+    <button onclick="calculateScore()">Проверить ответы</button>
+    
+    <div class="results" id="results"></div>
+</main>
+
+<footer>
+    © 2025 Онлайн-обучение Python для школьников старших классов
+</footer>
+
+<script>
+    function calculateScore() {
+        let score = 0;
+        for (let i = 1; i <= 5; i++) {
+            let q = document.querySelector(`input[name="q${i}"]:checked`);
+            if (q) {
+                score += parseInt(q.value);
+            }
+        }
+
+        let results = document.getElementById('results');
+        results.innerHTML = `Ваши баллы: ${score} из 5. <br>${getRecommendation(score)}`;
+    }
+
+    function getRecommendation(score) {
+        if (score === 5) {
+            return "Отличная работа! Вы прекрасно разбираетесь в Python.";
+        } else if (score >= 3) {
+            return "Хорошо! Но вам стоит повторить материал.";
+        } else {
+            return "Не расстраивайтесь! Продолжайте учиться и практиковаться.";
+        }
+    }
+</script>
+
+</body>
+</html>

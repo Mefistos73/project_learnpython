@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color:   #4CAF50;
+            color: white;
+            padding: 15px;  
+            font-size: 20px;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            gap: 20px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            color:black;
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: black;
+        }
+        .code-block {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .output {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px 0;
+            font-size: 16px;
+            
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body >
+   <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Основы Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="python-basics.html">Основы Python</a></li>
+                    <li><a href="loops.html">Циклы</a></li>
+                    <li><a href="functions-modules.html">Списки</a></li>
+                    <li><a href="working-with-files.html">Функции</a></li>
+                    <li><a href="projects.html">Практические задания</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <h2>Циклы в Python</h2>
+    <p>Циклы позволяют выполнять блок кода многократно. В Python есть два основных типа циклов: <strong>for</strong> и <strong>while</strong>.</p>
+    
+    <h3>Цикл for</h3>
+    <p>Цикл <strong>for</strong> используется для перебора элементов последовательности (списков, кортежей, строк и т.д.).</p>
+    <div class="output">
+        <pre>for i in range(5):
+    print(i)</pre>
+    </div>
+    <div class="output">
+        Результат выполнения:<br>
+        0<br>
+        1<br>
+        2<br>
+        3<br>
+        4
+    </div>
+
+    <h3>Цикл while</h3>
+    <p>Цикл <strong>while</strong> выполняет блок кода, пока условие истинно.</p>
+    <div class="output">
+        <pre>count = 0
+while count &lt; 5:
+    print(count)
+    count += 1</pre>
+    </div>
+    <div class="output">
+        Результат выполнения:<br>
+        0<br>
+        1<br>
+        2<br>
+        3<br>
+        4
+    </div>
+
+    <h3>Задача:</h3>
+    <p>Решим задачу: Найти сумму всех четных чисел от 1 до 10.</p>
+    <p>Решение с использованием цикла <strong>for</strong>:</p>
+    <div class="output">
+        <pre>sum_even = 0
+for i in range(1, 11):
+    if i % 2 == 0:
+        sum_even += i
+print(sum_even)</pre>
+    </div>
+    <div class="output">
+        Результат выполнения:<br>
+        30
+    </div>
+    
+    <p>Решение с использованием цикла <strong>while</strong>:</p>
+    <div class="output">
+        <pre>sum_even = 0
+i = 1
+while i &lt;= 10:
+    if i % 2 == 0:
+        sum_even += i
+    i += 1
+print(sum_even)</pre>
+    </div>
+    <div class="output">
+        Результат выполнения:<br>
+        30
+    </div>
+</main>
+
+<footer>
+    © 2025 Онлайн-обучение Python для школьников старших классов
+</footer>
+
+</body>
+</html>
+

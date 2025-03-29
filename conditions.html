@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;  
+            font-size: 20px;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            gap: 20px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            color: black;
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: black;
+        }
+        .code-block {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .output {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px 0;
+            font-size: 16px;   
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Основы Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="python-basics.html">Основы Python</a></li>
+                    <li><a href="loops.html">Циклы</a></li>
+                    <li><a href="functions-modules.html">Списки</a></li>
+                    <li><a href="working-with-files.html">Функции</a></li>
+                    <li><a href="projects.html">Практические задания</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Условия в Python</h2>
+        <p>Условия позволяют выполнять различные действия в зависимости от истинности или ложности выражения. В Python используются операторы <strong>if</strong>, <strong>elif</strong> и <strong>else</strong>.</p>
+        
+        <h3>Оператор if</h3>
+        <p>Оператор <strong>if</strong> проверяет условие и выполняет блок кода, если условие истинно.</p>
+        <div class="output">
+            <pre>age = 18
+if age &gt;= 18:
+    print("Вы совершеннолетний")</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            Вы совершеннолетний
+        </div>
+
+        <h3>Оператор elif</h3>
+        <p>Оператор <strong>elif</strong> позволяет проверять дополнительные условия, если предыдущее условие ложно.</p>
+        <div class="output">
+            <pre>age = 16
+if age &gt;= 18:
+    print("Вы совершеннолетний")
+elif age &gt;= 13:
+    print("Вы подросток")</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            Вы подросток
+        </div>
+
+        <h3>Оператор else</h3>
+        <p>Оператор <strong>else</strong> выполняет блок кода, если все предыдущие условия ложны.</p>
+        <div class="output">
+            <pre>age = 12
+if age &gt;= 18:
+    print("Вы совершеннолетний")
+elif age &gt;= 13:
+    print("Вы подросток")
+else:
+    print("Вы ребенок")</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            Вы ребенок
+        </div>
+
+        <h3>Пример задачи</h3>
+        <p>Решим задачу: Определить, является ли число четным или нечетным.</p>
+        <div class="output">
+            <pre>number = 7
+if number % 2 == 0:
+    print("Четное число")
+else:
+    print("Нечетное число")</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            Нечетное число
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Онлайн-обучение Python для школьников старших классов
+    </footer>
+</body>
+</html>

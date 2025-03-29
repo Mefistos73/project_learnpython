@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;  
+            font-size: 20px;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            gap: 20px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            color: black;
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: black;
+        }
+        .code-block {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .output {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Основы Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="python-basics.html">Основы Python</a></li>
+                    <li><a href="loops.html">Циклы</a></li>
+                    <li><a href="functions-modules.html">Списки</a></li>
+                    <li><a href="working-with-files.html">Функции</a></li>
+                    <li><a href="projects.html">Практические задания</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Списки в Python</h2>
+        <p>Списки — это упорядоченные изменяемые коллекции, которые могут содержать элементы различных типов. Они создаются с помощью квадратных скобок.</p>
+        
+        <h3>Создание списка</h3>
+        <p>Список можно создать, просто перечислив элементы в квадратных скобках.</p>
+        <div class="output">
+            <pre>my_list = [1, 2, 3, 4, 5]</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            <code>my_list = [1, 2, 3, 4, 5]</code>
+        </div>
+
+        <h3>Доступ к элементам списка</h3>
+        <p>К элементам списка можно обращаться по индексу, начиная с нуля.</p>
+        <div class="output">
+            <pre>print(my_list[0])  # Выведет 1</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            1
+        </div>
+
+        <h3>Добавление элементов в список</h3>
+        <p>Элементы можно добавлять в список с помощью метода <strong>append()</strong>.</p>
+        <div class="output">
+            <pre>my_list.append(6)
+print(my_list)</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            <code>[1, 2, 3, 4, 5, 6]</code>
+        </div>
+
+        <h3>Удаление элементов из списка</h3>
+        <p>Элементы можно удалять с помощью метода <strong>remove()</strong> или с помощью оператора <strong>del</strong>.</p>
+        <div class="output">
+            <pre>my_list.remove(3)
+print(my_list)</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            <code>[1, 2, 4, 5, 6]</code>
+        </div>
+
+        <h3>Пример задачи</h3>
+        <p>Решим задачу: Найти сумму всех чисел в списке.</p>
+        <div class="output">
+            <pre>numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+print(total)</pre>
+        </div>
+        <div class="output">
+            Результат выполнения:<br>
+            15
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Онлайн-обучение Python для школьников старших классов
+    </footer>
+</body>
+</html>
